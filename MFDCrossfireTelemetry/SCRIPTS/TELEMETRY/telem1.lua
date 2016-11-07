@@ -1,5 +1,5 @@
--- IRIS+ Telemetry script
--- by Jens Willy Johannsen <jens@jenswilly.dk>
+-- MyFlyDream <-> TBS Crossfire Telemetry script
+-- by HÃ©lio Teixeira <helio.b.teixeira@gmail.com>
 --
 -- Use at your own risk!
 -- Modify and distribute as you want but an attribution would be nice.
@@ -528,7 +528,7 @@ local function drawHeading_( heading )
 	local r = 35
 	local x,y = 106,59
 	
-	-- Convert compass direction to unit circle degrees (reverse direction and 90° CW offset)
+	-- Convert compass direction to unit circle degrees (reverse direction and 90Â° CW offset)
 	local offset_dir = ((heading) + 90) % 360
 	
 	local dir_N = offset_dir/180 * math.pi
@@ -780,7 +780,7 @@ local function run( event )
 	TPWR = getValue( "TPWR" ) -- Transmitter Power (0-2000mW)
 	
 	-- MyFlyDream
-	GPS  = getValue( "GPS" )  -- GPS Coordinates (0¼00'E 0¼00'N)
+	GPS  = getValue( "GPS" )  -- GPS Coordinates (0Â¼00'E 0Â¼00'N)
 	Alt  = getValue( "Alt" )  -- Altitude (m)
 	Sats = getValue( "Sats" ) -- # of Satellites
 	Ptch = getValue( "Ptch" ) -- Pitch angle of MFD (0-?rad)
